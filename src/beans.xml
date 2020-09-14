@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://springframework.org/schema/beans"
+	xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xsi:xsi:schemaLocation="http://springframework.org/schema/beans
+		http://springframework.org/schema/beans/spring-beans.xsd"
+		
+	<bean id="studentClient`" class = "shumei.Service.ui.StudentClient">
+		<property name="stu1" value = "张三" />
+		<property name="stu2" value = "赵四" />
+	</bean>
+</beans>
