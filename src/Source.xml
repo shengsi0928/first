@@ -4,9 +4,13 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
         
-	<bean id="source" class = "pojo.Sourse">
+	<bean name="sourse" class = "pojo.Sourse">
 		<property name="fruit" value = "香蕉" />
 		<property name="sugar" value = "多糖" />
 		<property name="size" value = "大杯"/>
 	</bean>
+	<bean name="juicemaker" class="pojo.JuiceMaker">
+		<property name="sourse" ref="sourse"/>
+	</bean>
+	<bean name="juiceProduct" class="pojo.JuiceProduct"></bean>
 </beans>

@@ -1,4 +1,4 @@
-package shumei;
+package pojo;
 
 
 import org.springframework.context.ApplicationContext;
@@ -14,9 +14,15 @@ public class Test_Fruit {
 		context = new ClassPathXmlApplicationContext(
 				new String[]{"Source.xml"});
 		
-		Sourse source = (Sourse)context.getBean("source");
+		Sourse source = (Sourse)context.getBean("sourse",Sourse.class);
 		System.out.println(source.getFruit());
 		System.out.println(source.getSugar());
 		System.out.println(source.getSize());
+
+		JuiceMaker maker = (JuiceMaker) context.getBean("juicemaker", JuiceMaker.class);
+		System.out.println(maker.makeJuice());
+
+		JuiceProduct product = (JuiceProduct)context.getBean("juiceProduct", JuiceProduct.class);
+		product.doSomeService();
 	}
 }
